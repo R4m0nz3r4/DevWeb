@@ -1,0 +1,13 @@
+.body *{
+    text-align: center;
+}
+
+.wrapper{
+    display: table;
+    width: 100%;
+}
+
+.inner-wrp{
+    display: table-cell;
+    width: 50%;
+}
