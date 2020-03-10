@@ -1,5 +1,6 @@
-.body *{
-    text-align: center;
+body{
+    background-color: cornflowerblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .wrapper{
