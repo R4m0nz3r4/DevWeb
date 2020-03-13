@@ -1,6 +1,24 @@
-body{
+html{
     background-color: cornflowerblue;
+}
+
+body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 900px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.txt-centro{
+    text-align: center;
+}
+
+.cabecalho {
+    background-color: crimson;
+    display: flex;
 }
 
 .wrapper{
@@ -11,4 +29,117 @@ body{
 .inner-wrp{
     display: table-cell;
     width: 50%;
+}
+
+.wrapper-img {
+    width: 144px;
+    height: 144px;
+    padding: 20px 40px;
+    background-color: black;
+}
+
+.wrapper-img img{
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.wrapper-ttl {
+    padding: 35px 20px;
+}
+
+.wrapper-ttl > h1{
+    margin: 10px 0 !important;
+}
+
+.corpo {
+    background-color: gold;
+    position: absolute;
+    width: 900px;
+}
+
+.pagina {
+    width: 680px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+
+.pagina.ativa{
+    display: block;
+}
+
+.pagina:not(.ativa){
+    display: none;
+}
+
+.pagina h3{
+    padding-bottom: 15px;
+}
+
+.guia {
+    display: flex;
+}
+
+.botao {
+    width: 80px;
+    text-align: center;
+    background-color: white;
+    display: block;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: black;
+}
+
+.botao:hover > div{
+    color: white;
+}
+
+.botao.left {
+    margin: 5px 0px 15px 20px;
+}
+
+.botao.right {
+    margin: 5px 20px 15px 0px;
+}
+
+.botao > div {
+    padding: 5px;
+}
+
+.pontos {
+    display: flex;
+    width: 100%;
+    height: 17px;
+    margin: 12px;
+    justify-content: center;
+}
+
+.pontos .pt {
+    display: block;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    margin: 0px 2.5px;
+    cursor: pointer;
+}
+
+.pontos .pt:not(.ativo) {
+    background-color: white;
+}
+
+.pontos .pt.ativo {
+    background-color: black;
+}
+
+.btn-voltar{
+    visibility: hidden;
+}
+
+.btn-avancar{
+    visibility: visible;
 }
