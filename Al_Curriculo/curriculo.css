@@ -1,8 +1,8 @@
-html{
+html {
     background-color: cornflowerblue;
 }
 
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 900px;
     margin: 0 auto;
@@ -12,7 +12,7 @@ h1, h2, h3 {
     margin: 0;
 }
 
-.txt-centro{
+.txt-centro {
     text-align: center;
 }
 
@@ -21,14 +21,39 @@ h1, h2, h3 {
     display: flex;
 }
 
-.wrapper{
+.wrapper {
     display: table;
     width: 100%;
 }
+.pagina[data-pgnum='1'] .wrapper label,
+.pagina[data-pgnum='2'] .wrapper label {
+    font-weight: 500;
+}
 
-.inner-wrp{
+.pagina[data-pgnum='1'] .info {
+    padding: 5px 0px;
+}
+
+.pagina[data-pgnum='2'] .inner-wrp {
+    display:flex;
+    width:100%;
+}
+
+.pagina[data-pgnum='3'] .wrapper label {
+    font-weight: 500;
+    display: block;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.pagina[data-pgnum='3'] .wrapper span {
+    text-align: justify;
+}
+
+.inner-wrp {
     display: table-cell;
     width: 50%;
+    padding: 0px 15px;
 }
 
 .wrapper-img {
@@ -38,18 +63,18 @@ h1, h2, h3 {
     background-color: black;
 }
 
-.wrapper-img img{
-    border-radius: 50%;
-    border: 2px solid white;
-}
+    .wrapper-img img {
+        border-radius: 50%;
+        border: 2px solid white;
+    }
 
 .wrapper-ttl {
     padding: 35px 20px;
 }
 
-.wrapper-ttl > h1{
-    margin: 10px 0 !important;
-}
+    .wrapper-ttl > h1 {
+        margin: 10px 0 !important;
+    }
 
 .corpo {
     background-color: gold;
@@ -67,17 +92,17 @@ h1, h2, h3 {
 }
 
 
-.pagina.ativa{
-    display: block;
-}
+    .pagina.ativa {
+        display: block;
+    }
 
-.pagina:not(.ativa){
-    display: none;
-}
+    .pagina:not(.ativa) {
+        display: none;
+    }
 
-.pagina h3{
-    padding-bottom: 15px;
-}
+    .pagina h3 {
+        padding-bottom: 15px;
+    }
 
 .guia {
     display: flex;
@@ -91,25 +116,25 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
-.botao:hover {
-    background-color: black;
-}
+    .botao:hover {
+        background-color: black;
+    }
 
-.botao:hover > div{
-    color: white;
-}
+        .botao:hover > div {
+            color: white;
+        }
 
-.botao.left {
-    margin: 5px 0px 15px 20px;
-}
+    .botao.left {
+        margin: 5px 0px 15px 20px;
+    }
 
-.botao.right {
-    margin: 5px 20px 15px 0px;
-}
+    .botao.right {
+        margin: 5px 20px 15px 0px;
+    }
 
-.botao > div {
-    padding: 5px;
-}
+    .botao > div {
+        padding: 5px;
+    }
 
 .pontos {
     display: flex;
@@ -119,27 +144,27 @@ h1, h2, h3 {
     justify-content: center;
 }
 
-.pontos .pt {
-    display: block;
-    height: 17px;
-    width: 17px;
-    border-radius: 50%;
-    margin: 0px 2.5px;
-    cursor: pointer;
-}
+    .pontos .pt {
+        display: block;
+        height: 17px;
+        width: 17px;
+        border-radius: 50%;
+        margin: 0px 2.5px;
+        cursor: pointer;
+    }
 
-.pontos .pt:not(.ativo) {
-    background-color: white;
-}
+        .pontos .pt:not(.ativo) {
+            background-color: white;
+        }
 
-.pontos .pt.ativo {
-    background-color: black;
-}
+        .pontos .pt.ativo {
+            background-color: black;
+        }
 
-.btn-voltar{
+.btn-voltar {
     visibility: hidden;
 }
 
-.btn-avancar{
+.btn-avancar {
     visibility: visible;
 }
