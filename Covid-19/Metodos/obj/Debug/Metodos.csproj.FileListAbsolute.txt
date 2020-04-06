@@ -1,0 +1,10 @@
+C:\Users\caver\source\repos\ProjCorona\Metodos\bin\Debug\Metodos.dll
+C:\Users\caver\source\repos\ProjCorona\Metodos\bin\Debug\Metodos.pdb
+C:\Users\caver\source\repos\ProjCorona\Metodos\bin\Debug\GenericParsing.dll
+C:\Users\caver\source\repos\ProjCorona\Metodos\bin\Debug\Objetos.dll
+C:\Users\caver\source\repos\ProjCorona\Metodos\bin\Debug\Objetos.pdb
+C:\Users\caver\source\repos\ProjCorona\Metodos\bin\Debug\GenericParsing.xml
+C:\Users\caver\source\repos\ProjCorona\Metodos\obj\Debug\Metodos.csprojAssemblyReference.cache
+C:\Users\caver\source\repos\ProjCorona\Metodos\obj\Debug\Metodos.csproj.CopyComplete
+C:\Users\caver\source\repos\ProjCorona\Metodos\obj\Debug\Metodos.dll
+C:\Users\caver\source\repos\ProjCorona\Metodos\obj\Debug\Metodos.pdb

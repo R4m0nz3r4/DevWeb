@@ -1,0 +1,5 @@
+C:\Users\caver\source\repos\ProjCorona\Objetos\bin\Debug\Objetos.dll
+C:\Users\caver\source\repos\ProjCorona\Objetos\bin\Debug\Objetos.pdb
+C:\Users\caver\source\repos\ProjCorona\Objetos\obj\Debug\Objetos.dll
+C:\Users\caver\source\repos\ProjCorona\Objetos\obj\Debug\Objetos.pdb
+C:\Users\caver\source\repos\ProjCorona\Objetos\obj\Debug\Objetos.csprojAssemblyReference.cache
