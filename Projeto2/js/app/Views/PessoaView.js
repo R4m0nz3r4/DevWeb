@@ -24,10 +24,10 @@ class PessoaView extends View {
                             <td>${pessoa.telefone}</td>
                             <td>${pessoa.peso}</td>
                             <td>${pessoa.altura}</td>
-                            <td>
-                                <span class='fa fa-pencil' onclick='pessoaController._abrirModalEditar(${pessoa.id})'></span>
-                                <span class='fa fa-eye' onclick='pessoaController._abrirModalVisualizar(${pessoa.id})'></span>
-                                <span class='fa fa-trash' onclick='pessoaController._deletarPessoa(${pessoa.id})'></span>
+                            <td class='txt-centro'>
+                                <span class='fa fa-pencil opc-icon m-r-5' onclick='pessoaController._abrirModalEditar(${pessoa.id})'></span>
+                                <span class='fa fa-eye opc-icon m-r-5' onclick='pessoaController._abrirModalVisualizar(${pessoa.id})'></span>
+                                <span class='fa fa-trash opc-icon' onclick='pessoaController._deletarPessoa(${pessoa.id})'></span>
                             </td>
                         </tr>
                     `).join('')}

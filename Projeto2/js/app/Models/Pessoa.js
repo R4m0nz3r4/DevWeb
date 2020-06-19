@@ -17,8 +17,6 @@ class Pessoa {
             this._altura = 0;
             this._probSaude = "";
         }
-
-        Object.freeze(this);
     }
 
     get id(){
@@ -47,5 +45,29 @@ class Pessoa {
 
     get probSaude(){
         return this._probSaude;
+    }
+
+    set nome(nome){
+        this._nome = nome;
+    }
+
+    set endereco(endereco){
+        this._endereco = endereco;
+    }
+
+    set telefone(telefone){
+        this._telefone = telefone;
+    }
+
+    set peso(peso){
+        this._peso = peso;
+    }
+
+    set altura(altura){
+        this._altura = altura;
+    }
+
+    set probSaude(probSaude){
+        this._probSaude = probSaude;
     }
 }

@@ -7,7 +7,7 @@ class PessoaController {
         this._telefone = $("#TelefoneInput");
         this._peso = $("#PesoInput");
         this._altura = $("#AlturaInput");
-        this._probSaude = $("#ProbSaudeInput");
+        this._probSaude = $("#ProbSaudeTextarea");
 
         this._listaPessoas = new ListaPessoas();
         this._pessoaView = new PessoaView($("#PessoasTabela"));
@@ -27,6 +27,21 @@ class PessoaController {
         this._pessoaView.update(this._listaPessoas);
 
         this._limparFormulario();
+    }
+
+    editarPessoa(id){
+        let nome = $("#NomeModalInput")[0].value;
+        let endereco = $("#EnderecoModalInput")[0].value;
+        let telefone = $("#TelefoneModalInput")[0].value;
+        let peso = $("#PesoModalInput")[0].value;
+        let altura = $("#AlturaModalInput")[0].value;
+        let probSaude = $("#ProbSaudeModalTextarea")[0].value;
+
+        this._listaPessoas.editarPessoa(id, nome, endereco, telefone, peso, altura, probSaude);
+
+        this._pessoaView.update(this._listaPessoas);
+
+        $("#ModalPessoa").modal('hide');
     }
 
     _criarPessoa(){

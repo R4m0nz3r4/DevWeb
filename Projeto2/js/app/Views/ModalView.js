@@ -43,8 +43,7 @@ class ModalView extends View{
                                 </div>
                                 <div class='form-group col-lg-12'>
                                     <label>Problemas de Saúde</label>
-                                    <input id="ProbSaudeModalInput" type="text" class="form-control" 
-                                    value='${model.pessoa.probSaude}' ${ model.editavel ? "" : "readonly" } required></input>
+                                    <textarea id="ProbSaudeModalTextarea" class="form-control" rows='5' ${ model.editavel ? "" : "readonly" }>${model.pessoa.probSaude}</textarea>
                                 </div>
                             </div>
                         </div>

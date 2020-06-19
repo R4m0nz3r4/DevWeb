@@ -1,6 +1,6 @@
 class Modal {
     constructor(pessoa, editavel){
-        if (pessoa, editavel) {
+        if (pessoa) {
             this._pessoa = pessoa;
         } else {
             this._pessoa = new Pessoa();

@@ -1,0 +1,42 @@
+html, body {
+    background-color: #bdbdbd !important;
+}
+
+.sessao-wrapper {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: -3px 3px 15px 0px #00000038;
+}
+
+.opc-icon {
+    font-size: 22px !important;
+    cursor: pointer;
+}
+
+.txt-centro{
+    text-align: center;
+}
+
+.m-t-30{
+    margin-top: 30px;
+}
+
+.m-t-20{
+    margin-top: 20px;
+}
+
+.m-t-10{
+    margin-top: 10px;
+}
+
+.m-b-30{
+    margin-bottom: 30px;
+}
+
+.m-r-5{
+    margin-right: 5px;
+}
+
+.p-30{
+    padding: 30px;
+}

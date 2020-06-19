@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,39 +15,50 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="sessao-bg">
-                    <form id="PacienteForm" onsubmit="pessoaController.inserirPessoa(event)">
-                        <div class="form-group">
-                            <label>Nome</label>
-                            <input id="NomeInput" type="text" placeholder="Nome" required class="form-control"></input>
-                        </div>
-                        <div class="form-group">
-                            <label>Endereço</label>
-                            <input id="EnderecoInput" type="text" placeholder="Endereço" required class="form-control"></input>
-                        </div>
-                        <div class="form-group">
-                            <label>Telefone</label>
-                            <input id="TelefoneInput" type="number" placeholder="Telefone" required class="form-control"></input>
-                        </div>
-                        <div class="form-group">
-                            <label>Peso</label>
-                            <input id="PesoInput" type="number" placeholder="Peso" required class="form-control"></input>
-                        </div>
-                        <div class="form-group">
-                            <label>Altura</label>
-                            <input id="AlturaInput" type="number" placeholder="Altura" required class="form-control"></input>
-                        </div>
-                        <div class="form-group">
-                            <label>Problemas de Saúde</label>
-                            <input id="ProbSaudeInput" type="text" class="form-control"></input>
-                        </div>
-                        
-                        <button class="btn btn-primary text-center" type="submit">Adicionar Pessoa</button>
-                        <button class="btn btn-primary text-center" type="button" onclick="pessoaController._limparFormulario()">Limpar Fomulário</button>
-                    </form>
+            <div class="sessao-wrapper m-t-30">
+                <div class="sessao p-30">
+                    <div class="col-lg-12 m-t-10">
+                        <h1>Cadastro Pessoal</h2>
+                        <form id="PacienteForm" class="m-t-20" onsubmit="pessoaController.inserirPessoa(event)">
+                            <div class="row">
+                                <div class="col-lg-6 form-group">
+                                    <label>Nome</label>
+                                    <input id="NomeInput" type="text" placeholder="Nome" required
+                                        class="form-control"></input>
+                                </div>
+                                <div class="col-lg-6 form-group">
+                                    <label>Telefone</label>
+                                    <input id="TelefoneInput" type="number" placeholder="Telefone" required
+                                        class="form-control"></input>
+                                </div>
+                                <div class="col-lg-6 form-group">
+                                    <label>Peso</label>
+                                    <input id="PesoInput" type="number" placeholder="Peso" required
+                                        class="form-control"></input>
+                                </div>
+                                <div class="col-lg-6 form-group">
+                                    <label>Altura</label>
+                                    <input id="AlturaInput" type="number" placeholder="Altura" required
+                                        class="form-control"></input>
+                                </div>
+                                <div class="col-lg-12 form-group">
+                                    <label>Endereço</label>
+                                    <input id="EnderecoInput" type="text" placeholder="Endereço" required
+                                        class="form-control"></input>
+                                </div>
+                                <div class="col-lg-12 form-group">
+                                    <label>Problemas de Saúde</label>
+                                    <textarea id="ProbSaudeTextarea" class="form-control" rows="5"></textarea>
+                                </div>
+                            </div>
 
-                    <div id="PessoasTabela"></div>
+                            <button class="btn btn-primary text-center" type="submit">Adicionar Pessoa</button>
+                            <button class="btn btn-primary text-center" type="button"
+                                onclick="pessoaController._limparFormulario()">Limpar Fomulário</button>
+                        </form>
+
+                        <div class="m-t-30 m-b-30" id="PessoasTabela"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,7 +73,6 @@
     <script src="js/app/Views/PessoaView.js"></script>
     <script src="js/app/Views/ModalView.js"></script>
     <script src="js/app/Controllers/PessoaController.js"></script>
-    <script src="js/app/Controllers/ModalController.js"></script>
     <script src="js/app/Helpers/Util.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -74,7 +85,6 @@
         crossorigin="anonymous"></script>
     <script>
         const pessoaController = new PessoaController();
-        const modalController = new ModalController();
     </script>
 </body>
 
