@@ -48,9 +48,9 @@ class ModalView extends View{
                             </div>
                         </div>
                         <div class='modal-footer'>
-                            <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
+                            <button type='button' class='btn btn-secondary' data-dismiss='modal'>Fechar</button>
                             ${ model.editavel ? 
-                                "<button type='button' class='btn btn-primary' onclick='pessoaController.editarPessoa(" + model.pessoa.id + ")'>Save changes</button>" : 
+                                "<button type='button' class='btn btn-primary' onclick='pessoaController.editarPessoa(" + model.pessoa.id + ")'>Salvar</button>" : 
                                 "" 
                             }
                         </div>

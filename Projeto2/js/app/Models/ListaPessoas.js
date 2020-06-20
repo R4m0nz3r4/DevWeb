@@ -7,12 +7,14 @@ class ListaPessoas {
         this._listaPessoas.push(pessoa);
     }
 
-    removerPessoa(id){
+    deletarPessoa(id){
         let pessoa = this._listaPessoas.find(elem => elem._id == id);
         const index = this._listaPessoas.indexOf(pessoa);
 
         if(index > -1){
             this._listaPessoas.splice(index, 1);
+        }else{
+            throw new Error("Registro não encontrado. Impossível deletar.");
         }
     }
 
@@ -31,14 +33,12 @@ class ListaPessoas {
             this._listaPessoas[index].peso = peso;
             this._listaPessoas[index].altura = altura;
             this._listaPessoas[index].probSaude = probSaude;
+        }else{
+            throw new Error("Registro não encontrado. Impossível editar.");
         }
     }
 
     get pessoas(){
         return [].concat(this._listaPessoas);
-    }
-
-    get numPessoas(){
-        return this._listaPessoas.length;
     }
 }

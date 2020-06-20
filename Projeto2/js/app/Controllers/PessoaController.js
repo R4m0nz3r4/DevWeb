@@ -1,5 +1,5 @@
 class PessoaController {
-    constructor(){
+    constructor() {
         let $ = document.querySelector.bind(document);
 
         this._nome = $("#NomeInput");
@@ -16,9 +16,13 @@ class PessoaController {
         this._modal = new Modal();
         this._modalView = new ModalView($("#PessoasModal"));
         this._modalView.update(this._modal);
+
+        this._mensagem = new Mensagem();
+        this._mensagemView = new MensagemView($("#Mensagem"));
+        this._mensagemView.update(this._mensagem);
     }
 
-    inserirPessoa(event){
+    inserirPessoa(event) {
         event.preventDefault();
 
         let pessoa = this._criarPessoa();
@@ -27,24 +31,52 @@ class PessoaController {
         this._pessoaView.update(this._listaPessoas);
 
         this._limparFormulario();
+
+        this._mensagem = new Mensagem("Inserção efetuada!", "alert alert-success");
+        this._mensagemView.update(this._mensagem);
     }
 
-    editarPessoa(id){
-        let nome = $("#NomeModalInput")[0].value;
-        let endereco = $("#EnderecoModalInput")[0].value;
-        let telefone = $("#TelefoneModalInput")[0].value;
-        let peso = $("#PesoModalInput")[0].value;
-        let altura = $("#AlturaModalInput")[0].value;
-        let probSaude = $("#ProbSaudeModalTextarea")[0].value;
+    editarPessoa(id) {
+        try{
+            let nome = $("#NomeModalInput")[0].value;
+            let endereco = $("#EnderecoModalInput")[0].value;
+            let telefone = $("#TelefoneModalInput")[0].value;
+            let peso = $("#PesoModalInput")[0].value;
+            let altura = $("#AlturaModalInput")[0].value;
+            let probSaude = $("#ProbSaudeModalTextarea")[0].value;
+    
+            this._listaPessoas.editarPessoa(id, nome, endereco, telefone, peso, altura, probSaude);
+    
+            this._pessoaView.update(this._listaPessoas);
+    
+            $("#ModalPessoa").modal('hide');
+    
+            this._mensagem = new Mensagem("Dados atualizados!", "alert alert-success");
+            this._mensagemView.update(this._mensagem);
+        }catch(e){
+            this._mensagem = new Mensagem("Algo deu errado. Verifique o terminal!", "alert alert-danger");
+            this._mensagemView.update(this._mensagem);
 
-        this._listaPessoas.editarPessoa(id, nome, endereco, telefone, peso, altura, probSaude);
-
-        this._pessoaView.update(this._listaPessoas);
-
-        $("#ModalPessoa").modal('hide');
+            console(e.message);
+        }
     }
 
-    _criarPessoa(){
+    _deletarPessoa(id) {
+        try{
+            this._listaPessoas.deletarPessoa(id);
+            this._pessoaView.update(this._listaPessoas);
+    
+            this._mensagem = new Mensagem("Remoção realizada!", "alert alert-success");
+            this._mensagemView.update(this._mensagem);
+        }catch(e){
+            this._mensagem = new Mensagem("Algo deu errado. Verifique o terminal!", "alert alert-danger");
+            this._mensagemView.update(this._mensagem);
+
+            console(e.message);
+        }
+    }
+
+    _criarPessoa() {
         return new Pessoa(
             Util._gerarID(),
             this._nome.value,
@@ -56,7 +88,7 @@ class PessoaController {
         );
     }
 
-    _limparFormulario(){
+    _limparFormulario() {
         this._nome.value = "";
         this._endereco.value = "";
         this._telefone.value = "";
@@ -65,7 +97,7 @@ class PessoaController {
         this._probSaude.value = "";
     }
 
-    _abrirModalEditar(id){
+    _abrirModalEditar(id) {
         let pessoa = this._listaPessoas.obterPessoa(id);
         this._modal = new Modal(pessoa, true);
         this._modalView.update(this._modal);
@@ -73,16 +105,11 @@ class PessoaController {
         $("#ModalPessoa").modal('show');
     }
 
-    _abrirModalVisualizar(id){
+    _abrirModalVisualizar(id) {
         let pessoa = this._listaPessoas.obterPessoa(id);
         this._modal = new Modal(pessoa, false);
         this._modalView.update(this._modal);
-        
-        $("#ModalPessoa").modal('show');
-    }
 
-    _deletarPessoa(id){
-        this._listaPessoas.removerPessoa(id);
-        this._pessoaView.update(this._listaPessoas);
+        $("#ModalPessoa").modal('show');
     }
 }
